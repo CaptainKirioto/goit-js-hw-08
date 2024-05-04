@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 24px;
+  width: 1128px;
+  margin: 24px auto;
+}
+
+.gallery-item {
+  width: ((100% - 48px) / 3);
+}
