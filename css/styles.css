@@ -28,7 +28,7 @@ img {
 }
 
 .basicLightbox {
-  background-color: rgba(46, 47, 66, 0, 8);
+  background-color: rgba(46, 47, 66, 0.8);
 }
 
 .gallery-item:hover {
