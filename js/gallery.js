@@ -103,11 +103,9 @@ function bigImage(event) {
   const bigImage = event.target.dataset.source;
 
   const instance = basicLightbox.create(`
-<div class="backdrop">
-  <div class="modal">
-  <img src="${bigImage}">
-  </div>
-</div>  
+
+  <img src="${bigImage}" width="1112" height="640">
+
 `);
   instance.show();
 }
