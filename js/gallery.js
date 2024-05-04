@@ -73,10 +73,12 @@ const galleryList = images.map(image => {
 
   const galleryItem = document.createElement('li');
   galleryItem.classList.add('gallery-item');
+
   const galleryLink = document.createElement('a');
   galleryLink.classList.add('gallery-link');
   galleryLink.setAttribute('href', original);
   galleryItem.append(galleryLink);
+
   const imageItem = document.createElement('img');
   imageItem.classList.add('gallery-image');
   imageItem.setAttribute('src', preview);
@@ -97,5 +99,15 @@ function bigImage(event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-  console.log(event.target.dataset.source);
+
+  const bigImage = event.target.dataset.source;
+
+  const instance = basicLightbox.create(`
+<div class="backdrop">
+  <div class="modal">
+  <img src="${bigImage}">
+  </div>
+</div>  
+`);
+  instance.show();
 }
